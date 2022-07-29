@@ -1,0 +1,65 @@
+@mixin strict_size($height, $width) {
+  @if $height {
+    height: #{$height};
+    min-height: #{$height};
+    max-height: #{$height};
+  }
+
+  @if $width {
+    width: #{$width};
+    min-width: #{$width};
+    max-width: #{$width};
+  }
+}
+
+@mixin for-custom($size) {
+  @media only screen and (max-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin for-ipad {
+  @media only screen and (max-width: 1096px) {
+    @content;
+  }
+}
+
+@mixin for-phone {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin max-width-content {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: content-box;
+}
+
+@mixin rotate_element {
+  // ! NEED THE ELEMENT TO FACE LEFT
+
+  &.top-left {
+    transform: rotate(45deg);
+  }
+  &.top {
+    transform: rotate(90deg);
+  }
+  &.top-right {
+    transform: rotate(125deg);
+  }
+  &.right {
+    transform: rotate(180deg);
+  }
+  &.bottom-right {
+    transform: rotate(225deg);
+  }
+  &.bottom {
+    transform: rotate(270deg);
+  }
+  &.bottom-left {
+    transform: rotate(315deg);
+  }
+}

@@ -1,0 +1,177 @@
+@import './variables';
+@import './helpers';
+
+html,
+body,
+#__nuxt,
+#__layout,
+main {
+  height: 100%;
+}
+
+html {
+  background-color: $bg_grey;
+
+  color: $dark;
+}
+
+body {
+  font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+a {
+  color: $dark;
+  text-decoration: none;
+}
+
+img {
+  user-select: none;
+}
+
+input {
+  outline: rgba($color: #000000, $alpha: 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+small,
+button,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+b {
+  color: inherit;
+}
+
+ol,
+ul,
+nav {
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+a {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
+
+  transition: $trs;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+p {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: normal;
+
+  b {
+    font-weight: 600;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+section.wrapper {
+  padding: 32px;
+}
+
+.section-title {
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    @include strict_size(24px, 24px);
+
+    margin: {
+      right: 12px;
+    };
+
+    .secondary {
+      opacity: 0.4;
+    }
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+}
+
+.white-block {
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid $grey;
+
+  padding: 40px;
+
+  &--title {
+    border-bottom: 1px solid $grey;
+
+    padding: {
+      bottom: 20px;
+    };
+
+    margin: {
+      bottom: 20px;
+    };
+
+    h1 {
+      font-size: 24px;
+      line-height: 33px;
+      font-weight: 600;
+    }
+  }
+}
+
+.c {
+  &-blue {
+    color: $blue;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 15px;
+
+  @include strict_size(48px, false);
+
+  border-radius: 4px;
+
+  background-color: $blue;
+
+  color: $white;
+  font-weight: 600;
+  letter-spacing: .05em;
+  font-size: 14px;
+  line-height: 14px;
+}
